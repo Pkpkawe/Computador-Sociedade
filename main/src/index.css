@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+:root {
+    font-size: 15px;
+}
+
+@theme {
+    --color-color-1: #368D5D;
+    --color-color-2: #7EB497;
+    --color-color-3: #B8C28D;
+}
