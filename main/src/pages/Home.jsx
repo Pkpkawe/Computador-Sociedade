@@ -1,6 +1,9 @@
 // Import React
 import React from 'react'
 
+// Components
+import Destaque_Principal from '../components/Destaque_Principal'
+
 // Function
 const Home = () => {
     return (
@@ -13,7 +16,7 @@ const Home = () => {
                 <section className="w-full flex flex-col gap-[20px]">
                     <h1 className="text-[2rem] font-bold">Destaques</h1>
 
-                    {/* Componente do Destaque Principal */}
+                    <Destaque_Principal />
 
                     <div className='w-full flex justify-between'> {/* Contém os outros destaques */}
 
