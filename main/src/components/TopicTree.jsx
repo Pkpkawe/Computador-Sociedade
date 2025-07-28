@@ -6,7 +6,7 @@ import { useState } from 'react'
 import ArrowIcon from '../assets/icons/arrow.svg'
 
 // Function
-const TopicTree = ({Topic, SubtopicsList}) => {
+const TopicTree = ({TopicName, SubtopicsList}) => {
     const [rotate, setRotate] = useState("rotate-180")
 
     const handleToggle = () => {
@@ -24,11 +24,11 @@ const TopicTree = ({Topic, SubtopicsList}) => {
                     <button className={`h-1/2 aspect-square ${rotate}`} onClick={handleToggle}>
                         <img src={ArrowIcon} className="h-full aspect-square" />
                     </button>
-                    <h2>{Topic}</h2>
+                    <h2>{TopicName}</h2>
                 </div>
                 <div className={`flex-col pl-[30px] ${rotate == "rotate-180" ? "hidden" : "flex"}`}>
                     {SubtopicsList.map((Subtopic, index) => {
-                        <p key={index}>{Subtopic.Title}</p>
+                        return <p key={index}>{Subtopic.title}</p>
                     })}
                 </div>
             </div>
