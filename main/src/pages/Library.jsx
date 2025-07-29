@@ -17,7 +17,7 @@ const Library = () => {
                     <h1 className="text-[1.2rem] font-bold">Computador & Sociedade</h1>
 
                     <div id="Topics" className="flex flex-col gap-[5px]">
-                        {Biblioteca.map((Topic) => {
+                        {LibraryJSON.map((Topic) => {
                           return <TopicTree TopicName={Topic.name} SubtopicsList={Topic.subtopics} />
                         })}
                     </div>
