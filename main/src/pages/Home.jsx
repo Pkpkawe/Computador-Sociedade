@@ -31,6 +31,7 @@ const Home = () => {
                     <div className='w-full flex flex-col gap-[20px]'> {/* Outros Assuntos */}
                         
                     </div>
+                    <button className='w-1/3 m-auto p-[10px] border rounded-[30px]'>Ver Mais</button>
                 </section>
             </main>
 
