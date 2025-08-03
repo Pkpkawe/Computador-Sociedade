@@ -1,6 +1,9 @@
 // Import React
 import React from 'react'
 
+// Components
+import TopicTree from '../components/TopicTree'
+
 // Funtion
 const Library = () => {
     return (
@@ -14,7 +17,9 @@ const Library = () => {
                     <h1 className="text-[1.2rem] font-bold">Computador & Sociedade</h1>
 
                     <div id="Topics" className="flex flex-col gap-[5px]">
-                        {/* Tópicos e seus subtópicos */}
+                        {LibraryJSON.map((Topic) => {
+                          return <TopicTree TopicName={Topic.name} SubtopicsList={Topic.subtopics} />
+                        })}
                     </div>
                 </section>
 
