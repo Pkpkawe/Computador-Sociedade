@@ -1,10 +1,15 @@
 // Import React
 import React from 'react'
 
+// Import Context
+import { LibraryJsonProvider } from './contexts/LibraryJsonContext'
+
 // Function
 const App = () => {
   return (
-    <div>App</div>
+    <LibraryJsonProvider>
+      {/* Routes */}
+    </LibraryJsonProvider>
   )
 }
 
