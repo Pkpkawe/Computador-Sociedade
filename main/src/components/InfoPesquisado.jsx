@@ -1,13 +1,23 @@
 // Import React
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 // Function
 const InfoPesquisado = ({index, subtopic}) => {
-    
+    const navigate = useNavigate()
+
+    const handleOnClick = (event) => {
+        event.preventDefault()
+        navigate(`/info?search=${subtopic.title}`)
+    }
+
     return (
-        <div key={index} className='bg-gray-100 w-full h-[70px] p-[10px] flex justify-between items-center gap-[10px] shadow-md'>
+        <div key={index} onClick={handleOnClick} className='bg-gray-100 w-full h-[90px] p-[10px] flex justify-between items-center gap-[10px] shadow-md hover:cursor-pointer'>
             <img className="h-full aspect-video" src={subtopic.image} alt="Imagem do subtópico" />
-            <p>{subtopic.title}</p>
+            <div className='flex flex-col text-right'>
+                <p className='text-[1.05rem] font-semibold'>{subtopic.title}</p>
+                <p>{subtopic.subtitle}</p>
+            </div>
         </div>
     )
 }
