@@ -1,37 +1,62 @@
 // Import React
 import React from 'react'
 import { useState, useEffect, useContext } from 'react'
-import {useParams} from 'react-router-dom'
+import { useSearchParams, useLocation } from 'react-router-dom'
+
+// Layouts
+import NavBar from '../layout/NavBar'
+import Footer from '../layout/Footer'
+
+// Contexts
+import { LibraryJsonContext } from '../contexts/LibraryJsonContext'
 
 // Function
 const Info = () => {
-    const {LibraryJSON} = useContext()
+    const {LibraryJSON} = useContext(LibraryJsonContext)
     const [subtopic, setSubtopic] = useState(null)
-    let {search} = useParams()
+    const [searchParams] = useSearchParams();
+    const location = useLocation()
     
     useEffect(() => {
+        const search = searchParams.get('search');
+
+        if (!search) {
+            setSubtopic(null)
+            return
+        }
+
+        let foundSubtopic = null
         for (const Topic of LibraryJSON) {
-            for (const Subtopic of Topic) {
-                if (search == Subtopic.title) {
-                    setSubtopic(Subtopic)
+            for (const Subtopic of Topic.subtopics) {
+                if (search.toLowerCase() == Subtopic.title.toLowerCase()) {
+                    foundSubtopic = Subtopic
                     break
                 }
             }
-            if (subtopic) break
+            if (foundSubtopic) break
         }
-    } ,[])
 
+        setSubtopic(foundSubtopic)
+    }, [location.search])
+
+    if (!subtopic) {
+        return (
+            <p>Carregando...</p>
+        )
+    }
+    
     return (
         <>
             <header className="w-full h-[100px]">
                 {/* NavBar */}
+                <NavBar />
             </header>
 
             <main className="bg-[#EEEEEE] w-full">
-                <section className='bg-white w-[90%] m-auto flex flex-col items-center gap-[20px] p-[3%]'>
+                <section className='bg-white w-[90%] m-auto flex flex-col items-center gap-[20px] p-[3%] pb-[10%]'>
                     <div className='w-full flex flex-col gap-[5px]'>
                         <h1 className='self-start text-[2.1rem] font-bold'>{subtopic.title}</h1>
-                        <p className='self-start text-[1.3rem]'>{subtopic.subtitle}</p>
+                        <p className='self-start text-[1.3rem]'>{subtopic.caption}</p>
                     </div>
                     <img className='w-full aspect-video object-cover' src={subtopic.image} alt="Imagem do subtópico" />
 
@@ -44,6 +69,7 @@ const Info = () => {
             </main>
 
             {/* Footer */}
+            <Footer />
         </>
     )
 }

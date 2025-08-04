@@ -19,16 +19,16 @@ const TopicTree = ({TopicName, SubtopicsList}) => {
 
     return (
         <>
-            <div className="flex flex-col text-[1.1rem] text-left">
+            <div className="flex flex-col text-left">
                 <div className="flex items-center gap-[5px]">
-                    <button className={`h-1/2 aspect-square ${rotate}`} onClick={handleToggle}>
+                    <button className={`h-1/2 aspect-square ${rotate} hover:cursor-pointer`} onClick={handleToggle}>
                         <img src={ArrowIcon} className="h-full aspect-square" />
                     </button>
-                    <h2>{TopicName}</h2>
+                    <h2 className='text-[1.15rem] font-medium'>{TopicName}</h2>
                 </div>
-                <div className={`flex-col pl-[30px] ${rotate == "rotate-180" ? "hidden" : "flex"}`}>
+                <div className={`flex-col gap-[7px] pl-[30px] ${rotate == "rotate-180" ? "hidden" : "flex"}`}>
                     {SubtopicsList.map((Subtopic, index) => {
-                        return <p key={index}>{Subtopic.title}</p>
+                        return <p key={index} className='text-[1.05rem]'>{Subtopic.title}</p>
                     })}
                 </div>
             </div>
