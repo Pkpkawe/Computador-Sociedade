@@ -1,5 +1,6 @@
 // Import React
 import React from 'react'
+import { useState, useEffect, useContext } from 'react'
 
 // Components
 import Destaque_Principal from '../components/Destaque_Principal'
@@ -10,8 +11,37 @@ import DestaquePrincipal from '../assets/img/Destaque_Principal.png'
 import NavBar from '../layout/NavBar'
 import Footer from '../layout/Footer'
 
+// Contexts
+import { LibraryJsonContext } from '../contexts/LibraryJsonContext'
+
 // Function
 const Home = () => {
+    const {LibraryJSON} = useContext(LibraryJsonContext)
+    const [subtopics, setSubtopics] = useState([])
+
+    const getRandomInt = (min, max) => {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+
+    const handleAddMoreInfo = () => {
+        const newSubtopics = [...subtopics]
+        for (let init = 0; init < 10; init++) {
+            const topicRandom = getRandomInt(0, LibraryJSON.length)
+            const subtopicRandom = getRandomInt(0, LibraryJSON[topicRandom].subtopics.length)
+            const subtopic = LibraryJSON[topicRandom].subtopics[subtopicRandom]
+            if (!newSubtopics.includes(subtopic)) {
+                newSubtopics.push(subtopic)
+            }
+        }
+        setSubtopics(newSubtopics)
+    }
+
+    useEffect(() => {
+        handleAddMoreInfo()
+    }, [])
+
     return (
         <>
             <header className="w-full h-[100px]">
@@ -34,9 +64,11 @@ const Home = () => {
                     <hr className="bg-black w-full h-[1px] border-none" />
 
                     <div className='w-full flex flex-col gap-[20px]'> {/* Outros Assuntos */}
-                        
+                        {subtopics.map((subtopic, index) => {
+                            return <MoreInfo key={index} Title={subtopic.title} Caption={subtopic.caption} Image={subtopic.image}/>
+                        })}
                     </div>
-                    <button className='w-1/3 m-auto p-[10px] border rounded-[30px]'>Ver Mais</button>
+                    <button className='w-1/3 m-auto p-[10px] border rounded-[30px] hover:cursor-pointer' onClick={handleAddMoreInfo}>Ver Mais</button>
                 </section>
             </main>
 
