@@ -21,8 +21,8 @@ const TopicTree = ({TopicName, SubtopicsList}) => {
         <>
             <div className="flex flex-col text-left">
                 <div className="flex items-center gap-[5px]">
-                    <button className={`h-1/2 aspect-square ${rotate} hover:cursor-pointer`} onClick={handleToggle}>
-                        <img src={ArrowIcon} className="h-full aspect-square" />
+                    <button className={`h-[20px] aspect-square ${rotate} hover:cursor-pointer`} onClick={handleToggle}>
+                        <img src={ArrowIcon} className="w-full aspect-square" />
                     </button>
                     <h2 className='text-[1.15rem] font-medium'>{TopicName}</h2>
                 </div>
