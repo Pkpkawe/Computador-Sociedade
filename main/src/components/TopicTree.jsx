@@ -1,12 +1,14 @@
 // Import React
 import React from 'react'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 // Import Assets
 import ArrowIcon from '../assets/icons/arrow.svg'
 
 // Function
 const TopicTree = ({TopicName, SubtopicsList}) => {
+    const navigate = useNavigate()
     const [rotate, setRotate] = useState("rotate-180")
 
     const handleToggle = () => {
@@ -28,7 +30,7 @@ const TopicTree = ({TopicName, SubtopicsList}) => {
                 </div>
                 <div className={`flex-col gap-[7px] pl-[30px] ${rotate == "rotate-180" ? "hidden" : "flex"}`}>
                     {SubtopicsList.map((Subtopic, index) => {
-                        return <p key={index} className='text-[1.05rem]'>{Subtopic.title}</p>
+                        return <p key={index} className='text-[1.05rem] hover:cursor-pointer' onClick={() => navigate(`/info?search=${Subtopic.title}`)}>{Subtopic.title}</p>
                     })}
                 </div>
             </div>
