@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
 
-  "homepage" : "https://jose-GuilhermeG.github.io/Computador-Sociedade",
+  "homepage" : "https://Pkpkawe.github.io/Computador-Sociedade",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
