@@ -47,7 +47,7 @@ const Info = () => {
     
     return (
         <>
-            <header className="w-full h-[100px]">
+            <header className="w-full h-[120px]">
                 {/* NavBar */}
                 <NavBar />
             </header>
@@ -56,13 +56,13 @@ const Info = () => {
                 <section className='bg-white w-[90%] m-auto flex flex-col items-center gap-[20px] p-[3%] pb-[10%]'>
                     <div className='w-full flex flex-col gap-[5px]'>
                         <h1 className='self-start text-[2.1rem] font-bold'>{subtopic.title}</h1>
-                        <p className='self-start text-[1.3rem]'>{subtopic.caption}</p>
+                        <p className='self-start text-[1.2rem]'>{subtopic.caption}</p>
                     </div>
-                    <img className='w-full aspect-video object-cover' src={subtopic.image} alt="Imagem do subtópico" />
+                    <img className='w-full max-h-[800px] aspect-video object-cover' src={subtopic.image} alt="Imagem do subtópico" />
 
                     <div className='w-full flex flex-col gap-[15px] indent-[30px]'>
                         {subtopic.info.map((paragraph, index) => {
-                            return <p key={index} className='text-[1.1rem]'>{paragraph}</p>
+                            return <p key={index} className='text-[1.15rem]'>{paragraph}</p>
                         })}
                     </div>
                 </section>

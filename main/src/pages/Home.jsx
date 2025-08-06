@@ -44,7 +44,7 @@ const Home = () => {
 
     return (
         <>
-            <header className="w-full h-[100px]">
+            <header className="w-full h-[120px]">
                 {/* NavBar */}
                 <NavBar />
             </header>

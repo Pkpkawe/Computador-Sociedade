@@ -52,9 +52,9 @@ const NavBar = () => {
     return (
         <nav className="z-2 bg-color-1 w-full h-full pl-[4%] pr-[4%] flex justify-between items-center shadow-md">
             <ul className="w-3/10 flex justify-between items-center">
-                <li className="text-[1.2rem] text-white font-bold"><Link to="/">Início</Link></li>
-                <li className="text-[1.2rem] text-white font-bold"><Link to="/library">Biblioteca</Link></li>
-                <li className="text-[1.2rem] text-white font-bold"><Link to="/about">Sobre</Link></li>
+                <li className="text-[1.4rem] text-white font-bold"><Link to="/">Início</Link></li>
+                <li className="text-[1.4rem] text-white font-bold"><Link to="/library">Biblioteca</Link></li>
+                <li className="text-[1.4rem] text-white font-bold"><Link to="/about">Sobre</Link></li>
             </ul>
             <form action="" method="post" onSubmit={handleSubmit} className='relative w-2/5'>
                 <input ref={InputSearch} onChange={handleOnChange} type="text" className="box-border bg-[url(/src/assets/icons/search.svg)] bg-white bg-size-[30px] bg-no-repeat bg-position-[10px] w-full p-[8px] pl-[45px] rounded-full outline-none shadow-md"  placeholder="Pesquisar" />
