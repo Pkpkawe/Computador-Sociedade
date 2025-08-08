@@ -11,9 +11,9 @@ const Footer = () => {
             </div>
             <hr className='bg-white w-[95%] h-[1.5px] border-none'/>
             <div className='w-[85%] text-center flex justify-between gap-[10px]'>
-                <p className='text-[1.1rem] text-white font-semibold'>Pietro Kawê Silva Oliveira</p>
-                <p className='text-[1.1rem] text-white font-semibold'>Pedro Henrique Lopes da Silva</p>
-                <p className='text-[1.1rem] text-white font-semibold'>José Guilherme Gurgel Barbosa</p>
+                <p className='text-[1.1rem] text-white font-semibold'><a href="https://github.com/Pkpkawe/" target="_blank">Pietro Kawê Silva Oliveira</a></p>
+                <p className='text-[1.1rem] text-white font-semibold'><a href="https://github.com/PedroLopes30/" target="_blank">Pedro Henrique Lopes da Silva</a></p>
+                <p className='text-[1.1rem] text-white font-semibold'><a href="https://github.com/Jose-GuilhermeG/" target="_blank">José Guilherme Gurgel Barbosa</a></p>
             </div>
         </footer>
     )

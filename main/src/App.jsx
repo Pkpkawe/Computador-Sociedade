@@ -9,6 +9,7 @@ import Info from './pages/Info'
 
 // Import Context
 import { LibraryJsonProvider } from './contexts/LibraryJsonContext'
+import About from './pages/About'
 
 // Function
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} /> {/* Home */}
           <Route path="/library" element={<Library />} /> {/* Library */}
-          <Route path="/about" element={<></>} /> {/* About */}
+          <Route path="/about" element={<About />} /> {/* About */}
           <Route path="/info" element={<Info />} /> {/* Info */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
