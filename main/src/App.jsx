@@ -4,7 +4,7 @@ import React from 'react'
 // Function
 const App = () => {
   return (
-    <div>App</div>
+    <div>app</div>
   )
 }
 
