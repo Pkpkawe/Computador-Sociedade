@@ -2,7 +2,7 @@ import Card from "./card";
 
 const Featured = ({card_parms_list})=>{
 
-    let div_style = 'w-full flex justify-around items-center px-2 min-h-[500px] pt-5 flex-wrap [&_div]:mt-2'
+    let div_style = 'w-full flex justify-around items-center px-2 min-h-[500px] pt-5 flex-wrap [&_div]:mt-3 max-[900px]:flex-col'
 
     if(!card_parms_list){
         return (
