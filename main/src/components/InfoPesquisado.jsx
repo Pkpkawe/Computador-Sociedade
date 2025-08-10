@@ -20,8 +20,7 @@ const InfoPesquisado = ({ subtopic, input, setSearchValue }) => {
         <div onClick={handleNavigate} className='bg-gray-100 w-full h-[90px] p-[10px] flex justify-between items-center gap-[10px] rounded-[5px] shadow-md hover:cursor-pointer'>
             <img className="h-full aspect-video" src={subtopic.image} alt="Imagem do subtópico" />
             <div className='flex flex-col text-right'>
-                <p className='text-[1.05rem] font-semibold'>{subtopic.title}</p>
-                <p>{subtopic.subtitle}</p>
+                <p className='text-[1.05rem] max-[650px]:text-[0.9rem] font-semibold'>{subtopic.title}</p>
             </div>
         </div>
     )

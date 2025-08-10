@@ -4,7 +4,7 @@ import { useState, useEffect, useContext } from 'react'
 import { useSearchParams, useLocation } from 'react-router-dom'
 
 // Layouts
-import NavBar from '../layout/NavBar'
+import Header from '../layout/Header'
 import Footer from '../layout/Footer'
 
 // Contexts
@@ -47,13 +47,11 @@ const Info = () => {
     
     return (
         <>
-            <header className="w-full h-[120px]">
-                {/* NavBar */}
-                <NavBar />
-            </header>
+            {/* Header */}
+            <Header />
 
             <main className="bg-[#EEEEEE] w-full">
-                <section className='bg-white w-[90%] m-auto flex flex-col items-center gap-[20px] p-[3%] pb-[10%]'>
+                <section className='bg-white w-[90%] max-[650px]:w-full m-auto flex flex-col items-center gap-[20px] p-[3%] max-[650px]:p-[4%] pb-[10%]'>
                     <div className='w-full flex flex-col gap-[5px]'>
                         <h1 className='self-start text-[2.1rem] font-bold'>{subtopic.title}</h1>
                         <p className='self-start text-[1.2rem]'>{subtopic.caption}</p>

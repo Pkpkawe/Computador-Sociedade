@@ -1,13 +1,16 @@
 // Import React
-import React, { use } from 'react'
+import React from 'react'
 import { useState, useContext } from 'react'
+
+// Assets
+import ArrowBack from '../assets/icons/arrow_back.svg'
 
 // Components
 import TopicTree from '../components/TopicTree'
 import Book from '../components/Book'
 
 // Layouts
-import NavBar from '../layout/NavBar'
+import Header from '../layout/Header'
 import Footer from '../layout/Footer'
 
 // Contexts
@@ -17,26 +20,39 @@ import { LibraryJsonContext } from '../contexts/LibraryJsonContext'
 const Library = () => {
     const {LibraryJSON} = useContext(LibraryJsonContext)
     const [tags, setTags] = useState([])
+    const baseWidth = "w-[70%]"
+    const [widthSideBar, setWidthSideBar] = useState(baseWidth)
+    const maxWidthVariants = {
+        "w-[70%]": "max-[650px]:w-[70%]",
+        "w-[70px]": "max-[650px]:w-[70px]",
+    }
+
+    const handleWidthSideBar = () => {
+        widthSideBar == baseWidth ? setWidthSideBar("w-[70px]") : setWidthSideBar(baseWidth)
+    }
 
     return (
         <>
-            <header className="w-full h-[120px]">
-                {/* NavBar */}
-                <NavBar />
-            </header>
+            {/* Header */}
+            <Header />
 
-            <main className="flex w-full h-[150vh]">
-                <section id="SideBar" className="overflow-auto bg-color-3 w-[23%] min-w-[230px] h-full text-center p-[15px] flex flex-col gap-[20px]">
-                    <h1 className="text-[1.25rem] font-bold">Computador & Sociedade</h1>
+            <main className="max-[650px]:relative flex w-full h-[150vh]">
+                <section id="SideBar" className={`${widthSideBar == baseWidth ? "max-[650px]:absolute" : "max-[650px]:relative"} overflow-auto bg-color-3 w-[30%] ${maxWidthVariants[widthSideBar]} min-w-[230px] max-[650px]:min-w-[70px] h-full text-center p-[15px] flex flex-col gap-[20px]`}>
+                    <div className='max-[650px]:block hidden'>
+                        <button className='h-[32px] w-[32px] hover:cursor-pointer' onClick={handleWidthSideBar}><img src={ArrowBack} alt="Botão para esconder SideBar" className={`h-full aspect-aquare ${widthSideBar == baseWidth ? "rotate-none" : "rotate-180"}`} /></button>
+                        <hr />
+                    </div>
 
-                    <div id="Topics" className="flex flex-col gap-[15px]">
+                    <h1 className={`text-[1.25rem] font-bold ${widthSideBar == baseWidth ? "max-[650px]:block" : "max-[650px]:hidden"}`}>Computador & Sociedade</h1>
+
+                    <div id="Topics" className={`${widthSideBar == baseWidth ? "max-[650px]:flex" : "max-[650px]:hidden"} flex flex-col gap-[15px]`}>
                         {LibraryJSON.map((topic, index) => {
                           return <TopicTree key={index} Topic={topic} Tags={tags} SetTags={setTags} />
                         })}
                     </div>
                 </section>
 
-                <section className='overflow-auto w-[77%] flex flex-col gap-[30px] p-[20px]'>
+                <section className='overflow-auto w-full flex flex-col gap-[30px] p-[20px]'>
                     <div className='w-full flex flex-wrap gap-[10px]'>
                         {tags.length == 0 ? <div></div> : tags.map((topic, index) => {
                             return (

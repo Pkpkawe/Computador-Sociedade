@@ -8,7 +8,7 @@ import MoreInfo from '../components/MoreInfo'
 import DestaquePrincipal from '../assets/img/Destaque_Principal.png'
 
 // Layouts
-import NavBar from '../layout/NavBar'
+import Header from '../layout/Header'
 import Footer from '../layout/Footer'
 
 // Contexts
@@ -44,14 +44,12 @@ const Home = () => {
 
     return (
         <>
-            <header className="w-full h-[120px]">
-                {/* NavBar */}
-                <NavBar />
-            </header>
+            {/* Header */}
+            <Header />
 
             <main className="w-[90%] flex flex-col gap-[20px] m-auto mt-[50px] mb-[50px]">
                 <section className="w-full flex flex-col gap-[20px]">
-                    <h2 className="text-[2rem] font-bold">Destaques</h2>
+                    <h2 className="text-[2rem] font-bold">Destaques da Semana</h2>
                     <Destaque_Principal />
 
                     <div className='w-full flex justify-between'> {/* Contém os outros destaques */}
