@@ -61,9 +61,9 @@ const About = () => {
                 <section className='w-[90%] text-center p-[10px] flex flex-col items-center gap-[10px] border rounded-[5px]'>
                     <h2 className='text-[1.6rem] font-semibold'>Redes Sociais</h2>
                     <div className='w-1/2 flex justify-around gap-[20px]'>
-                        <a href="https://www.instagram.com/menosumtrouxa/" target="_blank" className='w-[10%] aspect-square hover:cursor-pointer'><img src={iconInstagram} alt="Instagram Logo" className='w-full' /></a>
-                        <a href="https://timoteodacunha.com/" target="_blank" className='w-[10%] aspect-square hover:cursor-pointer'><img src={iconSite} alt="Site Logo" className='w-full' /></a>
-                        <a href="https://open.spotify.com/show/3lWO8VF2vg6NsVJXAA4fp2?si=iBqj0JxNR9W8mT4POmih-w" target="_blank" className='w-[10%] aspect-square hover:cursor-pointer'><img src={iconSpotify} alt="Spotify Logo" className='w-full' /></a>
+                        <a href="https://www.instagram.com/menosumtrouxa/" target="_blank" className='w-[10%] min-w-[40px] aspect-square hover:cursor-pointer'><img src={iconInstagram} alt="Instagram Logo" className='w-full' /></a>
+                        <a href="https://timoteodacunha.com/" target="_blank" className='w-[10%] min-w-[40px] aspect-square hover:cursor-pointer'><img src={iconSite} alt="Site Logo" className='w-full' /></a>
+                        <a href="https://open.spotify.com/show/3lWO8VF2vg6NsVJXAA4fp2?si=iBqj0JxNR9W8mT4POmih-w" target="_blank" className='w-[10%] min-w-[40px] aspect-square hover:cursor-pointer'><img src={iconSpotify} alt="Spotify Logo" className='w-full' /></a>
                     </div>
                 </section>
             </main>
