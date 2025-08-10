@@ -1,0 +1,14 @@
+networks:
+  Computador-Sociedade-Net:
+
+services:
+  frontend : 
+    container_name : Computador-Sociedade-frontend
+    build:
+      context: .
+      dockerfile : ./compose/dockerfile
+    networks: 
+      - Computador-Sociedade-Net
+    ports:
+      - "80:80"
+  

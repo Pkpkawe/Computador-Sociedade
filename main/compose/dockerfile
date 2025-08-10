@@ -1,0 +1,22 @@
+#react
+FROM node as build
+
+WORKDIR /app
+
+COPY package*.json .
+
+RUN npm install
+
+COPY . .
+
+RUN npm run build
+
+#nginx
+
+FROM nginx
+
+COPY --from=build app/build /usr/share/nginx/Computador-Sociedade/
+
+COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
+
+CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
