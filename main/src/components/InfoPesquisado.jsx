@@ -2,6 +2,9 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
+// Base_Url
+const base_url = import.meta.env.BASE_URL
+
 // Function
 const InfoPesquisado = ({ subtopic, input, setSearchValue }) => {
     const navigate = useNavigate()
@@ -13,7 +16,7 @@ const InfoPesquisado = ({ subtopic, input, setSearchValue }) => {
         setSearchValue("")
         input.current.blur()
 
-        navigate(`/info?search=${subtopic.title}`)
+        navigate(`${base_url}info?search=${subtopic.title}`)
     }
 
     return (

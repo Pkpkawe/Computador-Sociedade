@@ -1,7 +1,6 @@
 // Import React
 import React, { useEffect } from 'react'
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 
 // Import Assets
 import ArrowIcon from '../assets/icons/arrow.svg'
@@ -9,9 +8,11 @@ import ArrowIcon from '../assets/icons/arrow.svg'
 // Components
 import ModalBook from './ModalBook'
 
+// Base_Url
+const base_url = import.meta.env.BASE_URL
+
 // Function
 const TopicTree = ({Topic, Tags, SetTags}) => {
-    const navigate = useNavigate()
     const [rotate, setRotate] = useState("rotate-180")
     const [stateModalBook, setStateModalBook] = useState("hidden")
     

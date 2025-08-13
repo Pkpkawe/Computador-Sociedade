@@ -65,7 +65,7 @@ const Info = () => {
                     </div>
 
                     <div className='w-full self-start flex flex-col gap-[8px]'>
-                        <h2 className='text-[1rem] font-bold'>Referências:</h2>
+                        <h2 className={`${subtopic.references.length > 0 ? "flex" : "hidden"} text-[1rem] font-bold`}>Referências:</h2>
                         {subtopic.references.map((reference, index) => {
                             return <p key={index} className='text-left text-[0.9rem] max-[430px]:text-[0.6rem]'>{reference}</p>
                         })}

@@ -2,12 +2,15 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
+// Base_Url
+const base_url = import.meta.env.BASE_URL
+
 // Function
 const MoreInfo = ({Title, Caption, Image}) => {
     const navigate = useNavigate()
 
     const handleNavigate = () => {
-        navigate(`/info?search=${Title}`)
+        navigate(`${base_url}info?search=${Title}`)
     }
 
     return (

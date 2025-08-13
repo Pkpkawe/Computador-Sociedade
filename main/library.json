@@ -3,7 +3,7 @@
     "name": "Computadores e Sociedade",
     "subtopics": [
       {
-        "image": "/media_json/sociedade-da-informacao.jpg",
+        "image": "/Computador-Sociedade/media_json/sociedade-da-informacao.jpg",
         "title": "Sociedade da Informação",
         "subtitle": "O avanço dos computadores transformou profundamente a sociedade contemporânea.",
         "caption": "Da evolução tecnológica aos desafios contemporâneos: como os computadores transformam a sociedade, moldam a informação e redefinem nossa relação com o mundo digital.",
@@ -21,7 +21,7 @@
     "name": "Saúde e Bem-estar",
     "subtopics": [
       {
-        "image": "/media_json/os-impactos-do-tempo-excessivo-de-tela-na-saude.jpg",
+        "image": "/Computador-Sociedade/media_json/os-impactos-do-tempo-excessivo-de-tela-na-saude.jpg",
         "title": "Os impactos do tempo excessivo de tela na saúde",
         "subtitle": "Como o uso descontrolado de redes sociais afeta bem-estar mental, produtividade e relações sociais",
         "caption": "Com brasileiros passando mais de 9 horas diárias online, especialistas alertam para consequências como ansiedade, distúrbios do sono e prejuízos profissionais – saiba como reduzir os danos.",
@@ -36,7 +36,7 @@
         ]
       },
       {
-        "image": "/media_json/brasil-em-relacao-ao-uso-excessivo-das-telas.jpg",
+        "image": "/Computador-Sociedade/media_json/brasil-em-relacao-ao-uso-excessivo-das-telas.jpg",
         "title": "Brasil em relação ao uso excessivo das telas",
         "subtitle": "Brasil é o segundo no ranking mundial de tempo em frente às telas",
         "caption": "O Brasil está entre os países que mais consomem conteúdo digital no mundo, com 9 horas diárias em frente às telas – mais da metade do tempo acordado!",
@@ -52,7 +52,7 @@
         ]
       },
       {
-        "image": "/media_json/como-reduzir-o-tempo-de-tela.jpg",
+        "image": "/Computador-Sociedade/media_json/como-reduzir-o-tempo-de-tela.jpg",
         "title": "Como reduzir o tempo de tela?",
         "subtitle": "Equilibrando tecnologia e bem-estar na era digital",
         "caption": "Descubra estratégias eficazes para controlar o uso excessivo do smartphone e reconquistar seu tempo",
@@ -73,7 +73,7 @@
     "name": "Tecnologias digitais no educação",
     "subtopics": [
       {
-        "image": "/media_json/escolas-desconectadas-dos-smartphones.jpg",
+        "image": "/Computador-Sociedade/media_json/escolas-desconectadas-dos-smartphones.jpg",
         "title": "Escolas desconectadas dos smartphones",
         "subtitle": "Lei Anticelulares nas Escolas: Proteção ou Desconexão? O Debate Sobre Tecnologia e Educação no Brasil",
         "caption": "A nova lei que proíbe celulares nas escolas divide opiniões: 62% dos brasileiros apoiam a medida contra distração e cyberbullying, mas especialistas alertam – proibir não basta, é preciso ensinar a usar. O desafio agora é equilibrar saúde mental e aprendizagem na era digital.",
@@ -93,7 +93,7 @@
     "name": "Tecnologias digitais no mundo do trabalho",
     "subtopics": [
       {
-        "image": "/media_json/impactos-das-tecnologias-no-mundo-trabalhista.jpg",
+        "image": "/Computador-Sociedade/media_json/impactos-das-tecnologias-no-mundo-trabalhista.jpg",
         "title": "Impactos das tecnologias no mundo trabalhista",
         "subtitle": "Os desafios da era digital no mercado de trabalho",
         "caption": "Como automação e inteligência artificial estão remodelando as relações laborais – e o que podemos fazer para garantir um futuro mais equilibrado",
@@ -113,7 +113,7 @@
     "name": "Tecnologias digitais na economia",
     "subtopics": [
       {
-        "image": "/media_json/desemprego-estrutural.jpg",
+        "image": "/Computador-Sociedade/media_json/desemprego-estrutural.jpg",
         "title": "Desemprego estrutural",
         "subtitle": "Desemprego estrutural - máquinas tiram empregos das pessoas",
         "caption": "A automação e a modernização industrial aumentam a produtividade, mas a substituição da mão de obra humana por máquinas gera desempregos e causa impactos físicos e mentais aos trabalhadores",
@@ -128,7 +128,7 @@
         ]
       },
       {
-        "image": "/media_json/aumento-da-desigualdade-digital.jpg",
+        "image": "/Computador-Sociedade/media_json/aumento-da-desigualdade-digital.jpg",
         "title": "Aumento da desigualdade digital",
         "subtitle": "Desigualdade Digital: O Abismo Tecnológico que Amplia as Desigualdades Sociais",
         "caption": "Enquanto parte da sociedade navega na era digital, outra permanece à margem - a falta de acesso à tecnologia não é apenas uma questão de conectividade, mas de equidade social e oportunidades perdidas.",
@@ -149,7 +149,7 @@
     "name": "A influência do algoritmo",
     "subtopics": [
       {
-        "image": "/media_json/adultizacao.jpg",
+        "image": "/Computador-Sociedade/media_json/adultizacao.jpg",
         "title": "Adultização",
         "subtitle": "O circuito perverso que monetiza a exploração infantil online",
         "caption": "Quando plataformas priorizam o tempo de tela sobre a segurança, algoritmos transformam vulnerabilidade infantil em conteúdo 'recomendado'. A falta de fiscalização digital não é falha técnica – é escolha lucrativa das big-techs.",

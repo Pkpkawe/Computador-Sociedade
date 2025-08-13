@@ -16,6 +16,9 @@ import InfoPesquisado from '../components/InfoPesquisado'
 // Contexts
 import { LibraryJsonContext } from '../contexts/LibraryJsonContext'
 
+// Base_Url
+const base_url = import.meta.env.BASE_URL
+
 // Function
 const NavBar = () => {
     const {LibraryJSON} = useContext(LibraryJsonContext)
@@ -33,7 +36,7 @@ const NavBar = () => {
             setSearchValue("")
             InputSearch.current.blur()
             
-            navigate(`/info?search=${subtopics[0].title}`)
+            navigate(`${base_url}info?search=${subtopics[0].title}`)
         }
     }
     
@@ -62,9 +65,9 @@ const NavBar = () => {
     return (
         <nav className="z-2 bg-color-1 w-full h-full pl-[4%] pr-[4%] flex justify-between items-center shadow-md">
             <ul className="w-3/10 flex max-[950px]:hidden justify-between items-center">
-                <li className="text-[1.4rem] text-white font-bold"><Link to="/">Início</Link></li>
-                <li className="text-[1.4rem] text-white font-bold"><Link to="/library">Biblioteca</Link></li>
-                <li className="text-[1.4rem] text-white font-bold"><Link to="/about">Sobre</Link></li>
+                <li className="text-[1.4rem] text-white font-bold"><Link to={base_url}>Início</Link></li>
+                <li className="text-[1.4rem] text-white font-bold"><Link to={base_url + "library"}>Biblioteca</Link></li>
+                <li className="text-[1.4rem] text-white font-bold"><Link to={base_url + "about"}>Sobre</Link></li>
             </ul>
             <div className="z-2 relative hidden max-[950px]:flex flex-col w-1/3 max-[475px]:w-auto rounded-[5px]" >
                 <button className={`${stateMenu == 'hidden' ? "bg-transparent" : "bg-[#FFFFFF] border"} rounded-[5px] hover:cursor-pointer`} onClick={() => stateMenu == 'hidden' ? setStateMenu('flex') : setStateMenu('hidden')}>

@@ -12,7 +12,7 @@ import Page404 from './pages/erros/404'
 import { LibraryJsonProvider } from './contexts/LibraryJsonContext'
 import About from './pages/About'
 
-//consts
+// Base_Url
 const base_url = import.meta.env.BASE_URL
 
 // Function
@@ -23,9 +23,9 @@ const App = () => {
       <Router>
         <Routes>
           <Route path={base_url} element={<Home />} /> {/* Home */}
-          <Route path="/library" element={<Library />} /> {/* Library */}
-          <Route path="/about" element={<About />} /> {/* About */}
-          <Route path="/info" element={<Info />} /> {/* Info */}
+          <Route path={base_url + "library"} element={<Library />} /> {/* Library */}
+          <Route path={base_url + "about"} element={<About />} /> {/* About */}
+          <Route path={base_url + "info"} element={<Info />} /> {/* Info */}
           <Route path="*" element={<Page404/>} />
         </Routes>
       </Router>
