@@ -1,10 +1,20 @@
 // Import React
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
+
+// Base_Url
+const base_url = import.meta.env.BASE_URL
 
 // Function
 const Destaque_Principal = ({subtopic}) => {
+    const navigate = useNavigate()
+
+    const handleNavigate = () => {
+        navigate(`${base_url}info?search=${subtopic.title}`)
+    }
+
     return (
-        <div className="relative w-full">
+        <div className="relative w-full hover:cursor-pointer" onClick={handleNavigate}>
             <img src={subtopic.image} alt="Foto do Destaque Principal" className="object-cover w-full aspect-video min-h-[400px] max-h-[800px]" />
             <div className="absolute bottom-[0] bg-[#C1C1C18F] w-full p-[10px] text-[1.1rem] font-semibold">{subtopic.caption}</div>
         </div>

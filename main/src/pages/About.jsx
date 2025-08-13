@@ -21,10 +21,7 @@ const About = () => {
             </header>
 
             <main className="w-full p-[3%] flex flex-col items-center gap-[20px]">
-                <div className='w-full text-center'>
-                    <h1 className='text-[2rem] font-bold p-[5px]'>Sobre o Blog</h1>
-                    <hr />
-                </div>
+                    <h1 className='text-[2rem] text-center font-bold p-[5px]'>Sobre o Blog</h1>
 
                 <section className='w-[90%] p-[10px] text-center flex flex-col gap-[10px] items-center border rounded-[5px]'>
                     <h2 className='text-[1.6rem] font-semibold'>Informações Iniciais</h2>

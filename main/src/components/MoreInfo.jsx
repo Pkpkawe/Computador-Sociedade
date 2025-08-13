@@ -16,7 +16,7 @@ const MoreInfo = ({Title, Caption, Image}) => {
     return (
         <div className='w-full flex flex-col gap-[20px]'>
             <div className='w-full h-auto m-auto flex max-[1000px]:flex-col justify-around items-center gap-[10px]'>
-                <img src={Image} alt="Foto da Informação" className='w-[40%] max-[1000px]:w-full aspect-video object-cover rounded-[5px]' />
+                <img src={Image} alt="Foto da Informação" className='bg-color-2 w-[40%] max-[1000px]:w-full aspect-video object-cover rounded-[5px]' />
                 <div className='w-[60%] max-[1000px]:w-full aspect-[8/3] max-[1000px]:aspect-auto flex flex-col justify-between gap-[10px]'>
                     <div className='flex flex-col gap-[5px]'>
                         <h3 className="text-[1.7rem] font-semibold">{Title}</h3>
