@@ -37,15 +37,15 @@ const Library = () => {
             <Header />
 
             <main className="max-[650px]:relative flex w-full h-[150vh]">
-                <section id="SideBar" className={`${widthSideBar == baseWidth ? "max-[650px]:absolute" : "max-[650px]:relative"} overflow-auto bg-color-3 w-[30%] ${maxWidthVariants[widthSideBar]} min-w-[230px] max-[650px]:min-w-[70px] h-full text-center p-[15px] flex flex-col gap-[20px]`}>
+                <section id="SideBar" className={`${widthSideBar == baseWidth ? "max-[650px]:absolute" : "max-[650px]:relative"} overflow-auto bg-color-3 w-[30%] ${maxWidthVariants[widthSideBar]} min-w-[230px] max-[650px]:min-w-[70px] h-full text-center p-[15px] flex flex-col gap-[20px] max-[650px]:transition-all max-[650px]:duration-[0.6s]`}>
                     <div className='max-[650px]:block hidden'>
-                        <button className='h-[32px] w-[32px] hover:cursor-pointer' onClick={handleWidthSideBar}><img src={ArrowBack} alt="Botão para esconder SideBar" className={`h-full aspect-aquare ${widthSideBar == baseWidth ? "rotate-none" : "rotate-180"}`} /></button>
+                        <button className='h-[32px] w-[32px] hover:cursor-pointer' onClick={handleWidthSideBar}><img src={ArrowBack} alt="Botão para esconder SideBar" className={`h-full aspect-aquare ${widthSideBar == baseWidth ? "rotate-none" : "rotate-180"} transition-all duration-[0.6s]`} /></button>
                         <hr />
                     </div>
 
-                    <h1 className={`text-[1.25rem] font-bold ${widthSideBar == baseWidth ? "max-[650px]:block" : "max-[650px]:hidden"}`}>Computador & Sociedade</h1>
+                    <h1 className={`text-[1.25rem] font-bold ${widthSideBar != baseWidth ? "max-[650px]:hidden" : ""}`}>Computador & Sociedade</h1>
 
-                    <div id="Topics" className={`${widthSideBar == baseWidth ? "max-[650px]:flex" : "max-[650px]:hidden"} flex flex-col gap-[15px]`}>
+                    <div id="Topics" className={`${widthSideBar != baseWidth ? "max-[650px]:hidden" : ""} flex flex-col gap-[15px]`}>
                         {LibraryJSON.map((topic, index) => {
                           return <TopicTree key={index} Topic={topic} Tags={tags} SetTags={setTags} />
                         })}

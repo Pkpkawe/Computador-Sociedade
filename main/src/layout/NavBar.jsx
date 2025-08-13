@@ -6,6 +6,9 @@ import { useNavigate, Link } from 'react-router-dom'
 // Icons
 import MenuWhite from '../assets/icons/menu_white.svg'
 import MenuBlack from '../assets/icons/menu_black.svg'
+import Home from '../assets/icons/home.svg'
+import Library from '../assets/icons/library.svg'
+import About from '../assets/icons/about.svg'
 
 // Component
 import InfoPesquisado from '../components/InfoPesquisado'
@@ -63,18 +66,33 @@ const NavBar = () => {
                 <li className="text-[1.4rem] text-white font-bold"><Link to="/library">Biblioteca</Link></li>
                 <li className="text-[1.4rem] text-white font-bold"><Link to="/about">Sobre</Link></li>
             </ul>
-            <div className={`z-2 relative hidden max-[950px]:flex flex-col ${stateMenu == 'hidden' ? "bg-transparent" : "bg-[#FFFFFF] w-1/3 border rounded-[5px]"} `}>
-                <button className='h-full hover:cursor-pointer' onClick={() => stateMenu == 'hidden' ? setStateMenu('flex') : setStateMenu('hidden')}>
-                    <img className='h-full' src={stateMenu == 'hidden' ? MenuWhite : MenuBlack } alt="Icone Menu" />
+            <div className="z-2 relative hidden max-[950px]:flex flex-col w-1/3 max-[475px]:w-auto rounded-[5px]" >
+                <button className={`${stateMenu == 'hidden' ? "bg-transparent" : "bg-[#FFFFFF] border"} rounded-[5px] hover:cursor-pointer`} onClick={() => stateMenu == 'hidden' ? setStateMenu('flex') : setStateMenu('hidden')}>
+                    <img className='h-full aspect-square' src={stateMenu == 'hidden' ? MenuWhite : MenuBlack } alt="Icone Menu" />
                 </button>
 
-                <div className={`${stateMenu} absolute top-[150%] w-full p-[10px] bg-[#FFFFFF] border rounded-[5px] shadow-lg`}>
+                <div className={`${stateMenu} absolute top-[150%] max-[475px]:w-auto w-full p-[10px] max-[475px]:p-[5px] bg-[#FFFFFF] border rounded-[5px] shadow-lg transition-all`}>
                     <ul className="w-full flex flex-col justify-between gap-[10px]">
-                        <li className="text-[1.2rem] font-bold" onClick={() => setStateMenu("hidden")}><Link to="/">Início</Link></li>
+                        <li className="text-[1.2rem] max-[575px]:text-[0.9rem] font-bold" onClick={() => setStateMenu("hidden")}>
+                            <Link className="flex items-center gap-[10px]" to="/">
+                                <img src={Home} alt="Ícone Início" />
+                                <p className='max-[475px]:hidden'>Início</p>
+                            </Link>
+                        </li>
                         <hr className='w-full'/>
-                        <li className="text-[1.2rem] font-bold" onClick={() => setStateMenu("hidden")}><Link to="/library">Biblioteca</Link></li>
+                        <li className="text-[1.2rem] max-[575px]:text-[0.9rem] font-bold" onClick={() => setStateMenu("hidden")}>
+                            <Link className="flex items-center gap-[10px]" to="/library">
+                                <img src={Library} alt="Ícone Biblioteca" />
+                                <p className='max-[475px]:hidden'>Biblioteca</p>
+                            </Link>
+                        </li>
                         <hr className='w-full'/>
-                        <li className="text-[1.2rem] font-bold" onClick={() => setStateMenu("hidden")}><Link to="/about">Sobre</Link></li>
+                        <li className="text-[1.2rem] max-[575px]:text-[0.9rem] font-bold" onClick={() => setStateMenu("hidden")}>
+                            <Link className="flex items-center gap-[10px]" to="/about">
+                                <img src={About} alt="Ícone Sobre" />
+                                <p className='max-[475px]:hidden'>Sobre</p>
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             </div>

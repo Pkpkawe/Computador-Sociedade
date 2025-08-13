@@ -66,6 +66,7 @@ const Home = () => {
                             return <MoreInfo key={index} Title={subtopic.title} Caption={subtopic.caption} Image={subtopic.image}/>
                         })}
                     </div>
+
                     <button className='w-1/3 m-auto p-[10px] border rounded-[30px] hover:cursor-pointer' onClick={handleAddMoreInfo}>Ver Mais</button>
                 </section>
             </main>

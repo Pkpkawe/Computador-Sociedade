@@ -11,7 +11,7 @@ const ModalBook = ({state, setState, subtopic}) => {
     }
 
     return (
-        <div className={`${state} fixed top-[0] bottom-[0] left-[0] right-[0] bg-[#000000CC] w-full h-full`}>
+        <div className={`${state} fixed z-3 top-[0] bottom-[0] left-[0] right-[0] bg-[#000000CC] w-full h-full`}>
             <div className='relative m-auto bg-[#CCCCCC] h-7/10 w-6/10 max-[765px]:w-9/10 text-center flex flex-col justify-between items-center p-[15px] rounded-[10px] '>
                 <button className='self-end bg-red-500 aspect-square text-[1.2rem] text-white font-bold p-[2px] border-black border-[1px] rounded-[5px] hover:cursor-pointer' onClick={() => setState("hidden")}>X</button>
 

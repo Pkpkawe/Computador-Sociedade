@@ -60,7 +60,7 @@ const Info = () => {
 
                     <div className='w-full flex flex-col gap-[15px] indent-[30px]'>
                         {subtopic.info.map((paragraph, index) => {
-                            return <p key={index} className='text-[1.15rem]'>{paragraph}</p>
+                            return <p key={index} className='text-justify text-[1.15rem] max-[430px]:text-[1rem]'>{paragraph}</p>
                         })}
                     </div>
                 </section>

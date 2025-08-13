@@ -26,10 +26,10 @@ const About = () => {
                     <hr />
                 </div>
 
-                <section className='w-[90%] p-[10px] flex flex-col gap-[10px] items-center border rounded-[5px]'>
+                <section className='w-[90%] p-[10px] text-center flex flex-col gap-[10px] items-center border rounded-[5px]'>
                     <h2 className='text-[1.6rem] font-semibold'>Informações Iniciais</h2>
                     
-                    <div className='text-center flex flex-col items-center gap-[10px]'>
+                    <div className='flex flex-col items-center gap-[10px]'>
                         <div>
                             <p className='text-[1.2rem]'><strong>Desenvolvido por:</strong></p>
                             <p className='text-[1.1rem]'>Pietro Kawê Silva Oliveira, Pedro Henrique Lopes da Silva e José Guilherme Gurgel Barbosa</p>
@@ -60,7 +60,7 @@ const About = () => {
 
                 <section className='w-[90%] text-center p-[10px] flex flex-col items-center gap-[10px] border rounded-[5px]'>
                     <h2 className='text-[1.6rem] font-semibold'>Redes Sociais</h2>
-                    <div className='w-1/2 flex justify-around gap-[20px]'>
+                    <div className='w-1/2 max-[410px]:w-full flex justify-around gap-[20px]'>
                         <a href="https://www.instagram.com/menosumtrouxa/" target="_blank" className='w-[10%] min-w-[40px] aspect-square hover:cursor-pointer'><img src={iconInstagram} alt="Instagram Logo" className='w-full' /></a>
                         <a href="https://timoteodacunha.com/" target="_blank" className='w-[10%] min-w-[40px] aspect-square hover:cursor-pointer'><img src={iconSite} alt="Site Logo" className='w-full' /></a>
                         <a href="https://open.spotify.com/show/3lWO8VF2vg6NsVJXAA4fp2?si=iBqj0JxNR9W8mT4POmih-w" target="_blank" className='w-[10%] min-w-[40px] aspect-square hover:cursor-pointer'><img src={iconSpotify} alt="Spotify Logo" className='w-full' /></a>

@@ -46,12 +46,12 @@ const TopicTree = ({Topic, Tags, SetTags}) => {
         <>
             <div className="flex flex-col text-left gap-[8px]">
                 <div className="flex items-center gap-[5px]">
-                    <button className={`h-[20px] aspect-square ${rotate} hover:cursor-pointer`} onClick={handleToggle}>
+                    <button className={`h-[20px] aspect-square ${rotate} hover:cursor-pointer transition-all duration-[0.1s]`} onClick={handleToggle}>
                         <img src={ArrowIcon} className="w-full aspect-square" />
                     </button>
                     <h2 className='text-[1.15rem] font-medium'>{Topic.name}</h2>
                 </div>
-                <div className={`flex-col gap-[8px] pl-[30px] ${rotate == "rotate-180" ? "hidden" : "flex"}`}>
+                <div className={`flex flex-col gap-[8px] pl-[30px] ${rotate == "rotate-180" ? "hidden" : ""}`}>
                     {Topic.subtopics.map((Subtopic, index) => {
                         return (
                             <>
