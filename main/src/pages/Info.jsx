@@ -51,7 +51,7 @@ const Info = () => {
             <Header />
 
             <main className="bg-[#EEEEEE] w-full">
-                <section className='bg-white w-[90%] max-[650px]:w-full m-auto flex flex-col items-center gap-[20px] p-[3%] max-[650px]:p-[4%] pb-[10%]'>
+                <section className='bg-white w-[90%] max-[650px]:w-full m-auto flex flex-col items-center gap-[25px] p-[3%] max-[650px]:p-[4%] pb-[8%]'>
                     <div className='w-full flex flex-col gap-[5px]'>
                         <h1 className='self-start text-[2.1rem] font-bold'>{subtopic.title}</h1>
                         <p className='self-start text-[1.2rem]'>{subtopic.caption}</p>
@@ -61,6 +61,13 @@ const Info = () => {
                     <div className='w-full flex flex-col gap-[15px] indent-[30px]'>
                         {subtopic.info.map((paragraph, index) => {
                             return <p key={index} className='text-justify text-[1.15rem] max-[430px]:text-[1rem]'>{paragraph}</p>
+                        })}
+                    </div>
+
+                    <div className='w-full self-start flex flex-col gap-[8px]'>
+                        <h2 className='text-[1rem] font-bold'>Referências:</h2>
+                        {subtopic.references.map((reference, index) => {
+                            return <p key={index} className='text-left text-[0.9rem] max-[430px]:text-[0.6rem]'>{reference}</p>
                         })}
                     </div>
                 </section>
